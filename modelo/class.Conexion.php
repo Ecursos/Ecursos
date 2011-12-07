@@ -87,7 +87,7 @@ class Conexion
 		$this->user = "root";
 		$this->pass = "123";
 		$this->con = mysql_connect($this->host,$this->user,$this->pass);
-		mysql_select_db("e_learning", $this->con);
+		mysql_select_db("mydb", $this->con);
 		if (!$this->con){
 			die('Error: No se pudo conectar al servidor: ' . mysql_error());
 		}

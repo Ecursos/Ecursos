@@ -18,6 +18,7 @@
 <fieldset>
     <legend>Registro de Uusario</legend>
     <form method="post" id="formRegistro" name="formRegistro" action="./?c=guardarRegistro">
+    <input type="hidden" value="3" name="rolRegistro" />
     <label>Nombre</label>
     <input type="text" id="nombreRegistro" name="nombreRegistro" />
     <br>

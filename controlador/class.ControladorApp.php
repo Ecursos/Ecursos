@@ -82,7 +82,7 @@ class ControladorApp
         	$this->usuario->login(@$_REQUEST['username']);        	
         	if (!$this->usuario->isLogged()) {
         		echo "clave incorrecto";
-        		$this->vista->showPlantilla("VistaPlantillaLogin.php");       		
+        		$this->vista->showPlantilla("vista/index.php");   		
         	} 
         }
         else
@@ -90,12 +90,12 @@ class ControladorApp
 	        if (@$_REQUEST["controlador"]=="logout") {
 				$this->usuario->logout();
 				// echo  "Sesion cerrada";
-				$this->vista->showPlantilla("VistaPlantillaLogin.php");
+				$this->vista->showPlantilla("vista/index.php");
 				 
 			}        	        	
             if (!$this->usuario->isLogged()) {
             	// echo  "usuario sin sesion y sin request de usuario y password";
-            	$this->vista->showPlantilla("VistaPlantillaLogin.php");
+            	$this->vista->showPlantilla("vista/index.php");
         	}
         }
         

@@ -1,0 +1,52 @@
+body{
+background:url(../img/background.png) repeat-x;
+}
+div.spacer{
+height: 1em;
+}
+#top{
+width:100%;
+background:#29231e;
+position:relative;
+top:0;
+left:0;
+}
+#top ul{
+margin:10px 0;
+color:#FFFFFF;
+}
+#top ul li{
+display:inline;
+font: 15px bold Arial, Helvetica, sans-serif;
+}
+#bodyMain{
+background:#68a263;
+}
+#rss{
+background:url(../images/rss-logo.gif) no-repeat scroll center top transparent;
+padding:5px 30px 5px 0;
+}
+a#logo{
+background:url(../images/vos-voz.gif) no-repeat;
+width:470px;
+height:92px;
+float:left;
+margin-top:150px;
+}
+img#ciudad-logo{
+float:left;
+}
+#header{
+border-bottom:5px solid #29231e;
+}
+#menu{
+background:#e7f7fb;
+}
+#menu ul{
+padding-top:10px;
+margin-bottom:10px;
+}
+#menu ul li{
+display:inline;
+font:20px bold Arial, Helvetica, sans-serif;
+}

@@ -78,7 +78,7 @@ class ModeloUsuario
     public function insertRow($datos)
     {
         // section 127-0-0-1--2bc61e:12e6b7c56db:-8000:0000000000000E3C begin
-		$sql = "INSERT INTO alumnos (
+		$sql = "INSERT INTO usuarios (
 			clave,
 			nombres,
 			apellidos,
@@ -91,7 +91,7 @@ class ModeloUsuario
 			'".@$datos['nombreRegistro']."',
 			'".@$datos['apellidoRegistro']."',
 			'".@$datos['correoRegistro']."',						
-			'3',
+			'".@$datos['rolRegistro']."',
             '".date('Y/m/d')."',
             '1'			
 			)";
@@ -113,11 +113,11 @@ class ModeloUsuario
         // section 127-0-0-1--2bc61e:12e6b7c56db:-8000:0000000000000E3E begin
 		$sql= "
 			UPDATE usuarios SET 
-				username = '".@$datos[username]."',
-				password = '".@$datos[password]."',
-				nombre = '".@$datos[nombre]."',				
+				nombres = '".@$datos[nombre]."',
+				apellidos = '".@$datos[apellido]."',
+				clave = '".@$datos[clave]."',				
 				rol = '".@$datos[rol]."',				
-				email = '".@$datos[email]."'
+				correo = '".@$datos[email]."'
 				WHERE id = '".@$datos[id]."'
 		";
 		$this->ejecutarQuery($sql);        
@@ -152,10 +152,7 @@ class ModeloUsuario
     public function getRowByClave($clave)
     {
         // section -64--88-0-100--b2dec8:13357253886:-8000:0000000000001838 begin
-       $sql = "SELECT * FROM alumnos WHERE 
-       		clave='" . $clave . "' 
-       		LIMIT 1
-       		";
+       $sql = "SELECT * FROM usuarios WHERE clave='" . $clave . "' LIMIT 1";
        $row = $this->ejecutarQuery($sql);
 		return $row[0];
         // section -64--88-0-100--b2dec8:13357253886:-8000:0000000000001838 end
